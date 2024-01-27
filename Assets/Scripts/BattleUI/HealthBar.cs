@@ -18,13 +18,25 @@ public class  HealthBar : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        healthSlider.value = 50;
+        //Default value is always 50. 
+        health = 20;
+        healthSlider.value = (float)health/100;
     }
 
     // Update is called once per frame
     void Update()
     {
-        healthSlider.value = health;
+        if (health >= 100)
+        {
+            healthSlider.value = (float)1;
+        }
+        else if (health <= 0) {
+            healthSlider.value = (float)0;
+        }
+        else
+        {
+            healthSlider.value = (float)health/100;
+        }
     }
 
     public int getHealth() { return health; }
