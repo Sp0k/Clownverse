@@ -6,6 +6,7 @@ using UnityEngine.UI;
 
 public class ButtonSelect : MonoBehaviour
 {
+    public Slider slider;
     public GameObject firstButton;
     [Range(0.01f, 1)]
     public float speed;
@@ -14,13 +15,14 @@ public class ButtonSelect : MonoBehaviour
 
     private void Start()
     {
+        slider.interactable = false;
         image = GetComponent<Image>();
         EventSystem.current.SetSelectedGameObject(firstButton, new BaseEventData(EventSystem.current));
     }
 
     void Update()
     {
-        if (EventSystem.current.currentSelectedGameObject.GetComponent<Button>() == null) 
+        if (EventSystem.current.currentSelectedGameObject == null || EventSystem.current.currentSelectedGameObject.GetComponent<Button>() == null) 
         {
             image.enabled = false;
             return;
