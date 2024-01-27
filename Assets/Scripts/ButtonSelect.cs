@@ -6,6 +6,10 @@ using UnityEngine.EventSystems;
 public class ButtonSelect : MonoBehaviour
 {
     public GameObject firstButton;
+    [Range(0.01f, 1)]
+    public float speed;
+
+    Vector3 targetPos;
 
     private void Start()
     {
@@ -16,6 +20,9 @@ public class ButtonSelect : MonoBehaviour
     {
         Vector3 buttonPos = EventSystem.current.currentSelectedGameObject.transform.position;
 
-        transform.position = new Vector3(buttonPos.x, buttonPos.y, buttonPos.z);
+        float x = (buttonPos.x - transform.position.x) * speed;
+        float y = (buttonPos.y - transform.position.y) * speed;
+
+        transform.position = new Vector3(transform.position.x + x, transform.position.y + y, 0);
     }
 }
