@@ -28,22 +28,37 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _VoidTexture:
-        m_Texture: {fileID: 8900000, guid: d5ea866618d95f8488785fbb1f3ae860, type: 3}
+        m_Texture: {fileID: 8900000, guid: db1cc316f827c9144bdd6c923ca9b3c5, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
-    m_Ints: []
+    m_Ints:
+    - _Octaves: 4
+    - _StarOctaves: 4
+    - _VoidOctaves: 5
     m_Floats:
+    - _CellSize: 0.25
     - _Glossiness: 0
     - _GlossinessVoid: 0.84
-    - _Level: 0.92
+    - _Level: 1
     - _Metallic: 0
     - _MetallicVOid: 0.79
-    - _Strength: 2
+    - _Octaves: 8
+    - _StarBlend: 0.5
+    - _StarCellSize: 0.005
+    - _StarExposure: 4000
+    - _StarThreshold: 80
+    - _Strength: 1
+    - _VoidCellSize: 0.4
+    - _VoidOctaves: 6
     - _WaveStrength: 0.05
     - _Waves: 10
     m_Colors:
+    - VoidSeed: {r: 0, g: 0, b: 0, a: 1}
     - _BrightColor: {r: 1, g: 0.98017985, b: 0, a: 1}
     - _Color: {r: 0.70372313, g: 0, b: 0.96862745, a: 1}
-    - _DarkColor: {r: 0.139413, g: 0, b: 0.23899364, a: 1}
-    - _LightColor: {r: 0.9000001, g: 0, b: 1, a: 1}
+    - _DarkColor: {r: 0.32138368, g: 0, b: 0.45911938, a: 1}
+    - _LightColor: {r: 0.89892185, g: 0.009433806, b: 1, a: 1}
+    - _Seed: {r: 0.98, g: 6.73, b: 1.63, a: 0}
+    - _StarSeed: {r: 0, g: 0, b: 0.93, a: 1}
+    - _VoidSeed: {r: 1.22, g: 1, b: 2, a: 1}
   m_BuildTextureStacks: []
