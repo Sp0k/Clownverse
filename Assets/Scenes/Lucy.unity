@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657737, g: 0.49641442, b: 0.5748151, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657797, g: 0.49641514, b: 0.5748167, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -242,8 +242,6 @@ GameObject:
   - component: {fileID: 460768925}
   - component: {fileID: 460768924}
   - component: {fileID: 460768923}
-  - component: {fileID: 460768927}
-  - component: {fileID: 460768926}
   m_Layer: 5
   m_Name: Joke1
   m_TagString: Untagged
@@ -353,33 +351,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 460768921}
   m_CullTransparentMesh: 1
---- !u!114 &460768926
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 460768921}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 154379b11ac494d6e8adab26e9914432, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &460768927
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 460768921}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e741851cba3ad425c91ecf922cc6b379, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _data:
-    _json: '{"declarations":{"Kind":"Object","collection":{"$content":[],"$version":"A"},"$version":"A"}}'
-    _objectReferences: []
 --- !u!1 &533471841
 GameObject:
   m_ObjectHideFlags: 0
@@ -984,7 +955,7 @@ MonoBehaviour:
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
-  m_HorizontalAlignment: 2
+  m_HorizontalAlignment: 1
   m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
@@ -1457,7 +1428,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -260.4, y: -164.16}
+  m_AnchoredPosition: {x: -250, y: -165}
   m_SizeDelta: {x: 180.804, y: 67.6784}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &886289792
@@ -1472,7 +1443,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aae9274a6dd55425381129271d3bc3c5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  firstButton: {fileID: 0}
+  firstButton: {fileID: 460768921}
 --- !u!114 &886289793
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1993,7 +1964,7 @@ MonoBehaviour:
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
-  m_HorizontalAlignment: 2
+  m_HorizontalAlignment: 1
   m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0

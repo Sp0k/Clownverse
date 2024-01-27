@@ -5,11 +5,11 @@ using UnityEngine.EventSystems;
 
 public class ButtonSelect : MonoBehaviour
 {
-    public Button firstButton;
+    public GameObject firstButton;
 
     private void Start()
     {
-        EventSystem.current.SetSelectedGameObject(firstButton.gameObject, new BaseEventData(EventSystem.current));
+        EventSystem.current.SetSelectedGameObject(firstButton, new BaseEventData(EventSystem.current));
     }
 
     void Update()
