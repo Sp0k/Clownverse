@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Custom_Void Shader
+  m_Name: CornerHouse
   m_Shader: {fileID: 4800000, guid: 45e4332978bd4544aa6613027cd877cf, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
@@ -24,7 +24,7 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - _MainTex:
-        m_Texture: {fileID: 0}
+        m_Texture: {fileID: 2800000, guid: 9bc8c0d8c229d7b468ac83d8bc36d557, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _VoidTexture:
@@ -36,10 +36,10 @@ Material:
     - _StarOctaves: 4
     - _VoidOctaves: 5
     m_Floats:
-    - _CellSize: 0.25
+    - _CellSize: 0.53
     - _Glossiness: 0
     - _GlossinessVoid: 0.84
-    - _Level: 1
+    - _Level: 0.18
     - _Metallic: 0
     - _MetallicVOid: 0.79
     - _Octaves: 8
@@ -58,7 +58,7 @@ Material:
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _DarkColor: {r: 0.32138368, g: 0, b: 0.45911938, a: 1}
     - _LightColor: {r: 0.89892185, g: 0.009433806, b: 1, a: 1}
-    - _Seed: {r: 0.98, g: 6.73, b: 1.63, a: 0}
+    - _Seed: {r: 1.71, g: 6.73, b: 1.63, a: 0}
     - _StarSeed: {r: 0, g: 0, b: 0.93, a: 1}
     - _VoidSeed: {r: 1.22, g: 1, b: 2, a: 1}
   m_BuildTextureStacks: []
