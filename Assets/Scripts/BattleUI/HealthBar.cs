@@ -11,29 +11,20 @@ public class  HealthBar : MonoBehaviour
     private float yPos;
     private float xPos;
 
+    public Slider healthSlider;
+
     
         
     // Start is called before the first frame update
     void Start()
     {
-        health = 50;
+        healthSlider.value = 50;
     }
 
     // Update is called once per frame
     void Update()
     {
-        yPos = transform.position.y;
-        xPos = transform.position.x;
-        if (health < 50) {
-            transform.position = new Vector3( -(50-health), yPos, 0); 
-        }
-
-        else if (health > 50) {
-            transform.position = new Vector3(50-health, yPos, 0);
-        }
-        else {
-            transform.position = new Vector3(0, yPos, 0); 
-        }
+        healthSlider.value = health;
     }
 
     public int getHealth() { return health; }
