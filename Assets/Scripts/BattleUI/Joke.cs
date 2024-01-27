@@ -40,7 +40,7 @@ public class Joke : MonoBehaviour
         
     }
 
-    public Joke getJoke() { return this; }
+    public string getJokeString() { return this.jokeString; }
 
 
 
