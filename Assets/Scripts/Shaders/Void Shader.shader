@@ -7,9 +7,18 @@ Shader "Custom/Void Shader"
         _DarkColor ("Dark Color", Color) = (0,0,0,1)
         _LightColor ("Light Color", Color) = (1,1,1,1)
         _MainTex ("Albedo (RGB)", 2D) = "white" {}
-        _VoidTexture ("Void Texture", Cube) = "white" {}
-        _Waves ("Wave Frequency", Float) = 10
-        _WaveStrength ("Wave Strength", Float) = 0.1
+        _CellSize ("Cell Size", Float) = 0.1
+        _Octaves ("Octaves", Integer) = 4
+        _Seed ("Seed", Vector) = (0,0,0)
+        _VoidCellSize ("Void Cell Size", Float) = 0.1
+        _VoidOctaves ("Void Octaves", Integer) = 1
+        _VoidSeed ("Void Seed", Vector) = (0,0,0)
+        _StarCellSize ("Star Cell Size", Float) = 0.1
+        _StarOctaves ("Star Octaves", Integer) = 4
+        _StarSeed ("Star Seed", Vector) = (0,0,0)
+        _StarThreshold ("Star Threshold",Float) = 8
+        _StarExposure ("Star Exposure",Float) = 200
+        _StarBlend ("Star Blend",Range(0,1)) = 0.5
         _Glossiness ("Smoothness", Range(0,1)) = 0.5
         _Metallic ("Metallic", Range(0,1)) = 0.0
         _GlossinessVoid ("Void Smoothness", Range(0,1)) = 0.5
@@ -29,7 +38,6 @@ Shader "Custom/Void Shader"
         #pragma target 3.0
 
         sampler2D _MainTex;
-        samplerCUBE _VoidTexture;
 
         struct Input
         {
@@ -39,8 +47,18 @@ Shader "Custom/Void Shader"
             float3 worldPos;
         };
 
-        float _Waves;
-        float _WaveStrength;
+        
+        float _CellSize;
+        int _Octaves;
+        float3 _Seed;
+        float _VoidCellSize;
+        int _VoidOctaves;
+        float3 _VoidSeed;
+        float _StarCellSize;
+        int _StarOctaves;
+        float3 _StarSeed;
+        float _StarThreshold;
+        float _StarExposure;
         half _Level;
         half _Glossiness;
         half _Metallic;
@@ -57,21 +75,30 @@ Shader "Custom/Void Shader"
             // put more per-instance properties here
         UNITY_INSTANCING_BUFFER_END(Props)
 
+        #include "noise.cginc"
+
+        float space(float3 dir)
+        {
+            dir = normalize(dir);
+            float clouds = 0.5*perlinNoise3DOctaves(dir,_VoidCellSize,_VoidSeed,_VoidOctaves)+0.5;
+            // from https://www.shadertoy.com/view/NtsBzB
+            float starNoise = 0.5*perlinNoise3DOctaves(dir,_StarCellSize,_StarSeed,_StarOctaves)+0.5;
+            float stars = pow(clamp(starNoise, 0.0f, 1.0f), _StarThreshold) * _StarExposure;
+            return stars + clouds;
+        }
+        
         void surf (Input IN, inout SurfaceOutputStandard o)
         {
             float gamma = 2.2;
             float3 objectPos = mul(unity_WorldToObject,float4(IN.worldPos,1)).rgb;
-            float angle = atan2(objectPos.z,objectPos.x);
-            float wave = (0.5 * cos(angle * _Waves) + 0.5) * _WaveStrength;
-            float heightBoundary = 2 * _Level -1 + wave;
-            bool corrupted = objectPos.y < heightBoundary;
+            float noise = 0.5*perlinNoise3DOctaves(objectPos,_CellSize,_Seed,_Octaves)+0.5;
+            bool corrupted = noise*0.99 < _Level;
             // Albedo comes from a texture tinted by color
             float4 sTex = pow(tex2D(_MainTex, IN.uv_MainTex),1/gamma);
-            float4 sCube = pow(texCUBE(_VoidTexture,IN.viewDir),1/gamma);
-            float t = sCube.r * _Strength;
+            //float t = sCube.b * _Strength;
+            float t = space(IN.viewDir);
             float3 voidColor = lerp(_DarkColor,_LightColor,t);
             float3 normalColor = sTex.rgb;
-            
             
             o.Albedo = corrupted ? voidColor : normalColor;
             o.Emission = corrupted ? voidColor : 0;
@@ -84,6 +111,7 @@ Shader "Custom/Void Shader"
             
             // Metallic and smoothness come from slider variables
             o.Alpha = 1;
+            
         }
         ENDCG
     }
