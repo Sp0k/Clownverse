@@ -1444,6 +1444,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   firstButton: {fileID: 460768921}
+  speed: 0.25
 --- !u!114 &886289793
 MonoBehaviour:
   m_ObjectHideFlags: 0
