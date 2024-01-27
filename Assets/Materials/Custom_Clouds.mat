@@ -30,12 +30,12 @@ Material:
     m_Ints:
     - _Octaves: 10
     m_Floats:
-    - _CellSize: 4
+    - _CellSize: 10
     - _Glossiness: 0.5
     - _Metallic: 0
-    - _Threshold: 0.52
+    - _Threshold: 0.5
     m_Colors:
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _Seed: {r: 0, g: 0, b: 0, a: 1}
-    - _WindDir: {r: 20, g: 0, b: 0, a: 1}
+    - _WindDir: {r: 20, g: 0.75, b: 0, a: 1}
   m_BuildTextureStacks: []

@@ -1,4 +1,4 @@
-#define BIG 14962345
+#define BIG 14962
 #define UI0 1597334673U
 #define UI1 3812015801U
 #define UI2 uint2(UI0, UI1)

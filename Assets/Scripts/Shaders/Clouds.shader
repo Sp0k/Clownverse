@@ -4,12 +4,9 @@ Shader "Custom/Clouds"
     {
         _WindDir ("Wind DIrection", Vector) = (1,0,0)
         _Threshold ("Threshold", Range(0,1)) = 0.5
-        _MainTex ("Albedo (RGB)", 2D) = "white" {}
         _CellSize ("Cell Size", Float) = 0.1
         _Octaves ("Octaves", Integer) = 4
         _Seed ("Seed", Vector) = (0,0,0)
-        _Glossiness ("Smoothness", Range(0,1)) = 0.5
-        _Metallic ("Metallic", Range(0,1)) = 0.0
     }
     SubShader
     {
@@ -56,11 +53,11 @@ Shader "Custom/Clouds"
             o.Albedo = c.rgb;
             // Metallic and smoothness come from slider variables
             float3 offset = _WindDir * _Time;
-            o.Metallic = _Metallic;
-            o.Smoothness = _Glossiness;
+            o.Metallic = 0;
+            o.Smoothness = 0;
             float noise = perlinNoise3DOctaves(IN.worldPos + offset,_CellSize,_Seed,_Octaves);
             if(noise < _Threshold) discard;
-            o.Alpha = noise;
+            o.Alpha = 1;
         }
         ENDCG
     }
