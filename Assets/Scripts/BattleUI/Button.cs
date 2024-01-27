@@ -4,6 +4,8 @@ using System.Linq;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using Unity.VisualScripting;
+
 
 
 public class Button : MonoBehaviour
@@ -15,7 +17,7 @@ public class Button : MonoBehaviour
 
     public Button(List<Joke> jokeList)
     {
-        int jokeIndex = Random.RandomRange(0, jokeList.Count);
+        int jokeIndex = Random.Range(0, jokeList.Count);
         this.joke = jokeList.ElementAt(jokeIndex);
         jokeList.RemoveAt(jokeIndex);
      
@@ -32,4 +34,10 @@ public class Button : MonoBehaviour
     {
         Text.text = joke.getJokeString();
     }
+
+    public void jokeClicked() {
+        //affectHealth(get)
+    }
+
+
 }
