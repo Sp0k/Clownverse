@@ -2,8 +2,8 @@ Shader "Custom/Void Shader"
 {
     Properties
     {
-        _Level ("Corruption Level", Range(0,1)) = 1
-        _Strength ("Strength", Float) = 2
+        _Color ("Color", Color) = (1,1,1,1)
+        _Level ("Corruption Level", Range(0,1)) = 0.5
         _DarkColor ("Dark Color", Color) = (0,0,0,1)
         _LightColor ("Light Color", Color) = (1,1,1,1)
         _MainTex ("Albedo (RGB)", 2D) = "white" {}
@@ -27,16 +27,17 @@ Shader "Custom/Void Shader"
     }
     SubShader
     {
-        Tags { "RenderType"="Opaque" }
+        Tags {  "RenderType"="Opaque"}
         LOD 200
-
+        
+        
         CGPROGRAM
         // Physically based Standard lighting model, and enable shadows on all light types
         #pragma surface surf Standard fullforwardshadows
 
         // Use shader model 3.0 target, to get nicer looking lighting
         #pragma target 3.0
-
+    
         sampler2D _MainTex;
 
         struct Input
@@ -47,7 +48,7 @@ Shader "Custom/Void Shader"
             float3 worldPos;
         };
 
-        
+        float4 _Color;
         float _CellSize;
         int _Octaves;
         float3 _Seed;
@@ -90,6 +91,7 @@ Shader "Custom/Void Shader"
         void surf (Input IN, inout SurfaceOutputStandard o)
         {
             float gamma = 2.2;
+            clip(_Color.a -1);
             float3 objectPos = mul(unity_WorldToObject,float4(IN.worldPos,1)).rgb;
             float noise = 0.5*perlinNoise3DOctaves(objectPos,_CellSize,_Seed,_Octaves)+0.5;
             bool corrupted = noise*0.99 < _Level;
@@ -106,14 +108,13 @@ Shader "Custom/Void Shader"
             o.Smoothness = corrupted ? _GlossinessVoid : _Glossiness;
             
             o.Emission = pow(o.Emission,gamma);
-            o.Albedo = pow(o.Albedo,gamma);
+            o.Albedo = pow(o.Albedo*_Color.rgb,gamma);
 
             
-            // Metallic and smoothness come from slider variables
-            o.Alpha = 1;
+            o.Alpha = _Color.a;
             
         }
         ENDCG
     }
-    FallBack "Diffuse"
+    FallBack "Standard"
 }
