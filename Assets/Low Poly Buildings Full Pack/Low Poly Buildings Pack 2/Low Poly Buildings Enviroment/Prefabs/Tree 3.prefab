@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 33000012184852418}
   - component: {fileID: 23000012318164940}
   - component: {fileID: 7851816820639011910}
-  - component: {fileID: 3841913310741619361}
+  - component: {fileID: 724317735930310662}
   m_Layer: 0
   m_Name: Tree 3
   m_TagString: Untagged
@@ -107,7 +107,7 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 4300012, guid: bdd4236b0c5580f41a4d7589179b3752, type: 3}
---- !u!114 &3841913310741619361
+--- !u!114 &724317735930310662
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
