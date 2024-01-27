@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 33000011007162430}
   - component: {fileID: 23000012603468436}
   - component: {fileID: 8912370011433037414}
+  - component: {fileID: 5717541606604492978}
   m_Layer: 0
   m_Name: Flatty Roof Blue 1
   m_TagString: Untagged
@@ -106,3 +107,21 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 4300000, guid: 35c799ece81d02a40be79a404f5a2947, type: 3}
+--- !u!114 &5717541606604492978
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1000012313036626}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 75bca896bf5c0804ebd4605b1d728dd9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fadeType: 0
+  customFade: 0
+  fadeTo: 0
+  otherObjects: []
+  checkParentObject: 0
+  faded: 0

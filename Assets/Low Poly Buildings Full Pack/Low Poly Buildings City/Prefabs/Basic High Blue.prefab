@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 33000014014027748}
   - component: {fileID: 23000013087318050}
   - component: {fileID: 6316870015866298098}
+  - component: {fileID: 4875308046220439921}
   m_Layer: 0
   m_Name: Basic High Blue
   m_TagString: Untagged
@@ -106,3 +107,21 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 4300000, guid: ccaec668bf1e9514dbc0ed388b0f15be, type: 3}
+--- !u!114 &4875308046220439921
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1000013529280958}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 75bca896bf5c0804ebd4605b1d728dd9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fadeType: 0
+  customFade: 0
+  fadeTo: 0
+  otherObjects: []
+  checkParentObject: 0
+  faded: 0

@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 33000012770127300}
   - component: {fileID: 23000010427538622}
   - component: {fileID: 5206476961753524836}
+  - component: {fileID: 7027481980714897517}
   m_Layer: 0
   m_Name: Museum
   m_TagString: Untagged
@@ -106,3 +107,21 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 4300000, guid: 40725ec9d526cb24da63c0cf8d62b582, type: 3}
+--- !u!114 &7027481980714897517
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1000011444144756}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 75bca896bf5c0804ebd4605b1d728dd9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fadeType: 0
+  customFade: 0
+  fadeTo: 0
+  otherObjects: []
+  checkParentObject: 0
+  faded: 0
