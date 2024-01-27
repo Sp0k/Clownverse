@@ -39,7 +39,7 @@ Material:
     - _CellSize: 0.25
     - _Glossiness: 0
     - _GlossinessVoid: 0.84
-    - _Level: 1
+    - _Level: 0.54
     - _Metallic: 0
     - _MetallicVOid: 0.79
     - _Octaves: 8

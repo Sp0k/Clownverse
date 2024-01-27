@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Default ignored files
 /shelf/
 /workspace.xml
@@ -6,6 +7,16 @@
 /projectSettingsUpdater.xml
 /contentModel.xml
 /.idea.Clownverse.iml
+=======
+﻿# Default ignored files
+/shelf/
+/workspace.xml
+# Rider ignored files
+/contentModel.xml
+/.idea.Clownverse.iml
+/modules.xml
+/projectSettingsUpdater.xml
+>>>>>>> afb388fa39a9cb0184a5f3160717a3b9ff8248f1
 # Editor-based HTTP Client requests
 /httpRequests/
 # Datasource local storage ignored files
