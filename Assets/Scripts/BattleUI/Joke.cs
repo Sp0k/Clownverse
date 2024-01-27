@@ -5,15 +5,26 @@ using UnityEngine;
 public class Joke : MonoBehaviour
 {
     private string jokeString; 
-    private bool isGood;
+    private static bool isGood;
     private int damage; 
 
 
-    public Joke(string jokeString, bool isGood, int damage)
+    public Joke(string jokeString, int damage)
     {
         this.jokeString = jokeString;
-        this.isGood = isGood;
         this.damage = damage;
+    }
+
+    public static void EffectOnHealth()
+    {
+        if (isGood)
+        {
+            HealthBar.affectHealth(10);
+        }
+        else
+        {
+            HealthBar.affectHealth(-10);
+        }
     }
 
 

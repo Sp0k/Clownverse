@@ -5,9 +5,9 @@ using UnityEditorInternal;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class HealthBar : MonoBehaviour
+public class  HealthBar : MonoBehaviour
 {
-    private int health;
+    private static int health;
     private float yPos;
     private float xPos;
 
@@ -36,5 +36,10 @@ public class HealthBar : MonoBehaviour
         }
     }
 
-    public int getHealth() { return this.health; }
+    public int getHealth() { return health; }
+
+    public static void affectHealth(int value)
+    {
+        health += value;
+    }
 }
