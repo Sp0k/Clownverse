@@ -8,18 +8,10 @@ public class Joke : MonoBehaviour
     private string setup; 
 
 
-    public Joke(string punchlineStr, int damage)
+    public Joke(Punchline[] punchlineArr, string setup)
     {
-        this.punchlineStr = punchlineStr;
-        this.damage = damage;
-        if (this.damage > 0) { 
-            this.isGood = true; 
-        }
-        else
-        {
-            this.isGood = false;
-        }
-        
+        this.punchlineArr = punchlineArr;
+        this.setup = setup;        
     }
 
 
@@ -37,8 +29,8 @@ public class Joke : MonoBehaviour
         
     }
 
-    public string getPunchlineString() { return this.jokeString; }
-    public int getPunchlineDamage() { return this.damage; }
+    public Punchline[] GetPunchlineArr() { return this.punchlineArr; }
+    public string GetSetup() { return this.setup;}
 
 
 

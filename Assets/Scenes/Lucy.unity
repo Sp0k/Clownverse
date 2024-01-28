@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657737, g: 0.49641442, b: 0.5748151, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657797, g: 0.49641514, b: 0.5748167, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1443,6 +1443,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aae9274a6dd55425381129271d3bc3c5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  slider: {fileID: 2083408140}
+  image: {fileID: 886289793}
   firstButton: {fileID: 460768921}
   speed: 0.25
 --- !u!114 &886289793

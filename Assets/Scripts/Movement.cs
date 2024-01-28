@@ -16,7 +16,7 @@ public class Movement : MonoBehaviour
     public float turnSmoothTime = 0.1f;
     public float groundDistance = 0.4f;
     public LayerMask groundMask;
-    public float maxJumpSpeed = 100;
+    public float maxJumpSpeed = 30f;
 
     Vector3 velocity;
     float turnSmoothVelocity;
