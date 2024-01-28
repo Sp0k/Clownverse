@@ -8,10 +8,13 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Main Menu.unity
     guid: 721a935cbf08e7143aa7bd70fb606e84
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Gabe.unity
     guid: 44cb4dca50b5e904dba5200fb2fdfe77
   - enabled: 1
     path: Assets/Scenes/Lucy.unity
     guid: 29d7bb75738ef064291c9891c1cf568e
+  - enabled: 1
+    path: Assets/Scenes/Anthony.unity
+    guid: d5034890acdecc34dbd02cfc36760b93
   m_configObjects: {}
