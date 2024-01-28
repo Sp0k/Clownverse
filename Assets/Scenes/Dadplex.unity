@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657737, g: 0.49641442, b: 0.5748151, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657797, g: 0.49641514, b: 0.5748167, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -6390,7 +6390,9 @@ MonoBehaviour:
   _button1: {fileID: 460768921}
   _button2: {fileID: 840379914}
   _button3: {fileID: 1862824873}
+  _winLose: {fileID: 0}
   _battleIndex: 0
+  worldSaveIndex: 0
 --- !u!4 &1371169903 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3117918663046819748, guid: 16f2a6a6321bb894c984093ed7270f45, type: 3}
