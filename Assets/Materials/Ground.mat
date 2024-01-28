@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: CornerHouse
+  m_Name: Ground
   m_Shader: {fileID: 4800000, guid: 45e4332978bd4544aa6613027cd877cf, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
@@ -24,7 +24,7 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: 9bc8c0d8c229d7b468ac83d8bc36d557, type: 3}
+        m_Texture: {fileID: 2800000, guid: 7ca8b5853500b8b4d9facc01a7f5dfc8, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _VoidTexture:
@@ -32,14 +32,14 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Ints:
-    - _Octaves: 4
+    - _Octaves: 8
     - _StarOctaves: 4
     - _VoidOctaves: 5
     m_Floats:
-    - _CellSize: 0.85
+    - _CellSize: 1
     - _Glossiness: 0
     - _GlossinessVoid: 0.84
-    - _Level: 0.38
+    - _Level: 0.39
     - _Metallic: 0
     - _MetallicVOid: 0.79
     - _Octaves: 8
