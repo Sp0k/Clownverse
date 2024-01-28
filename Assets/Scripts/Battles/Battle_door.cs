@@ -28,7 +28,7 @@ public class Battle_door : MonoBehaviour
         if (doorReady && Input.GetKeyDown(KeyCode.E))
         {
             _uiObject.SetActive(false);
-            SceneManager.LoadScene("Scenes/" + _sceneName, LoadSceneMode.Additive);
+            SceneManager.LoadScene(SceneManager.GetSceneByName(_sceneName).buildIndex);
         }
     }
 

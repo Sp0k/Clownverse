@@ -22,6 +22,7 @@ public class RunBattle : MonoBehaviour
     public GameObject _button1; 
     public GameObject _button2;
     public GameObject _button3;
+    public TextMeshProUGUI _winLose;
 
     private TextMeshProUGUI text1;
     private TextMeshProUGUI text2;
@@ -40,43 +41,26 @@ public class RunBattle : MonoBehaviour
         bs = new Boss_script(_battleIndex);
         jokes = bs.getJokes();
 
+        _winLose.gameObject.SetActive(false);
+
         displayJoke();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        //End conditions
-        health = HealthBar.getHealth();
-        if (JokeCounter >= 5)
-        {
-            //Determine who wins
-            if (health > 50)
-            {
-                //Player wins
-            }
-            else
-            {
-                //Player looses
-            }
-        }
-
-        else if (health >= 100)
-        {
-            //player wins
-        }
-        else if (health <= 0) 
-        {
-            //player looses
-        }
-    }
-
-
     public void endBattle()
     {
+        health = HealthBar.getHealth();
         // Win/Lose screen
+        _winLose.gameObject.SetActive(true);
+        if (health >= 50)
+        {
+            _winLose.text = "YOU WIN!!! :)";
+        }
+        else
+        {
+            _winLose.text = "YOU LOSE!!! :)";
+        }
 
-        // Switch back
+        // switch back
     }
 
     public void endTurn(int index)
@@ -116,6 +100,4 @@ public class RunBattle : MonoBehaviour
         _button2.GetComponentInChildren<TextMeshProUGUI>().text = "2. " + activeJoke.GetPunchlineArr()[1].getText();
         _button3.GetComponentInChildren<TextMeshProUGUI>().text = "3. " + activeJoke.GetPunchlineArr()[2].getText();
     }
-
-    //public static Joke GetActiveJoke() { return ActiveJoke;  }
 }
