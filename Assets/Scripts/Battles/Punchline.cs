@@ -9,8 +9,8 @@ public class Punchline : MonoBehaviour
     private int value;
     private bool good;
 
-    // Setter
-    public void setValues(string text, int value, bool good)
+    // Constructor
+    public Punchline(string text, int value, bool good)
     {
         this.text = text;
         this.value = value;
