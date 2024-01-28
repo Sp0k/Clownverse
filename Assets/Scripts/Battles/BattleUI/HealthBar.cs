@@ -7,7 +7,7 @@ using UnityEngine.UI;
 
 public class  HealthBar : MonoBehaviour
 {
-    private static int health;
+    public static int health;
     private float yPos;
     private float xPos;
 
@@ -19,7 +19,7 @@ public class  HealthBar : MonoBehaviour
     void Start()
     {
         //Default value is always 50. 
-        health = 50;
+        health = 20;
         healthSlider.value = (float)health/100;
     }
 
@@ -39,7 +39,7 @@ public class  HealthBar : MonoBehaviour
         }
     }
 
-    public int getHealth() { return health; }
+    public static int getHealth() { return health; }
 
     public static void affectHealth(int value)
     {
