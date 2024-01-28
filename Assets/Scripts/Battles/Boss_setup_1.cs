@@ -41,7 +41,7 @@ public class Boss_setup_1
         // Third Joke
         punchlines = new Punchline[3];
         punchlines[0] = new Punchline("The rest are weekdays!", good, true);
-        punchlines[1] = new Punchline("Because they are my days off ", mediocre, false);
+        punchlines[1] = new Punchline("Because they are my days off", mediocre, false);
         punchlines[2] = new Punchline("The historical context", bad, false);
 
         jokes[2] = new Joke(punchlines, "Why are Saturday and Sunday the strongest days?");
@@ -49,7 +49,7 @@ public class Boss_setup_1
         // Fourth Joke
         punchlines = new Punchline[3];
         punchlines[0] = new Punchline("Cows don’t know what’s happening", bad, false);
-        punchlines[1] = new Punchline("Udder cows M", mediocre, false);
+        punchlines[1] = new Punchline("Udder cows", mediocre, false);
         punchlines[2] = new Punchline("They read the Moospaper", good, true);
 
         jokes[3] = new Joke(punchlines, "Why didn’t the banana go to jail after robbing a bank?");
@@ -58,7 +58,7 @@ public class Boss_setup_1
         punchlines = new Punchline[3];
         punchlines[0] = new Punchline("It got off on appeal!", good, true);
         punchlines[1] = new Punchline("A banana can’t rob a bank", bad, false);
-        punchlines[2] = new Punchline("Bribed the police M", mediocre, false);
+        punchlines[2] = new Punchline("Bribed the police", mediocre, false);
         
         jokes[4] = new Joke(punchlines, "Why didn’t the banana go to jail after robbing a bank?");
     }
