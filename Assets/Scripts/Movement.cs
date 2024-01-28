@@ -19,6 +19,7 @@ public class Movement : MonoBehaviour
     public float maxJumpSpeed = 30f;
     public Vector3 originPos = Vector3.zero;
     public float tpHeight = -10;
+    public AudioManager manager;
 
     Vector3 velocity;
     float turnSmoothVelocity;
@@ -27,6 +28,8 @@ public class Movement : MonoBehaviour
     private void Start()
     {
         controller = GetComponent<CharacterController>();
+        manager.Play("Overworld");
+        
     }
 
     void Update()
