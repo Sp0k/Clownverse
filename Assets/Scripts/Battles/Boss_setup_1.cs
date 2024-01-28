@@ -5,9 +5,9 @@ using UnityEngine;
 public class Boss_setup_1
 {
     // Class attributes
-    private int good = -10;
-    private int bad = 10;
-    private int mediocre = 15;
+    private const int good = 10;
+    private const int bad = -10;
+    private const int mediocre = -15;
 
     private Joke[] jokes = new Joke[5];
 
@@ -44,7 +44,7 @@ public class Boss_setup_1
         punchlines = new Punchline[3];
         punchlines[0] = new Punchline("bad 4", bad, false);
         punchlines[1] = new Punchline("mediocre 4", mediocre, false);
-        punchlines[2] = new Punchline("good ", good, true);
+        punchlines[2] = new Punchline("good 4", good, true);
 
         jokes[3] = new Joke(punchlines, "Joke 4");
 
@@ -52,7 +52,9 @@ public class Boss_setup_1
         punchlines = new Punchline[3];
         punchlines[0] = new Punchline("good 5", good, true);
         punchlines[1] = new Punchline("bad 5", bad, false);
-        punchlines[1] = new Punchline("mediocre 5", mediocre, false);
+        punchlines[2] = new Punchline("mediocre 5", mediocre, false);
+        
+        jokes[4] = new Joke(punchlines, "Joke 5");
     }
 
     public Joke[] getJokes() { return jokes; }
