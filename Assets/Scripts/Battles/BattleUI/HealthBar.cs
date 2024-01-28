@@ -19,7 +19,7 @@ public class  HealthBar : MonoBehaviour
     void Start()
     {
         //Default value is always 50. 
-        health = 20;
+        health = 50;
         healthSlider.value = (float)health/100;
     }
 
