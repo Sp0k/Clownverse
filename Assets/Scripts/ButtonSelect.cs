@@ -10,6 +10,7 @@ public class ButtonSelect : MonoBehaviour
     public GameObject firstButton;
     [Range(0.01f, 1)]
     public float speed;
+    public static Joke joke; 
 
     Image image;
 
@@ -17,6 +18,7 @@ public class ButtonSelect : MonoBehaviour
     {
         slider.interactable = false;
         image = GetComponent<Image>();
+        image.enabled = true;
         EventSystem.current.SetSelectedGameObject(firstButton, new BaseEventData(EventSystem.current));
     }
 
@@ -34,5 +36,6 @@ public class ButtonSelect : MonoBehaviour
         float y = (buttonPos.y - transform.position.y) * speed;
 
         transform.position = new Vector3(transform.position.x + x, transform.position.y + y, 0);
+        
     }
 }
