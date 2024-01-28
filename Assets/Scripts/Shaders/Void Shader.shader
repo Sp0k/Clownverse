@@ -103,7 +103,7 @@ Shader "Custom/Void Shader"
             //float t = sCube.b * _Strength;
             float t = space(IN.viewDir);
             float3 voidColor = lerp(_DarkColor,_LightColor,t);
-            float3 normalColor = sTex.rgb;
+            float3 normalColor = sTex.rgb*_Color;
             
             o.Albedo = corrupted ? voidColor : normalColor;
             o.Emission = corrupted ? voidColor : 0;
@@ -111,7 +111,7 @@ Shader "Custom/Void Shader"
             o.Smoothness = corrupted ? _GlossinessVoid : _Glossiness;
             
             o.Emission = pow(o.Emission,gamma);
-            o.Albedo = pow(o.Albedo*_Color.rgb,gamma);
+            o.Albedo = pow(o.Albedo.rgb,gamma);
 
             
             o.Alpha = _Color.a;
