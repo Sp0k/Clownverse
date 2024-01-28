@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657797, g: 0.49641514, b: 0.5748167, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657737, g: 0.49641442, b: 0.5748151, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1591,7 +1591,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 179.5, y: 44.15448}
+  m_AnchoredPosition: {x: 128, y: 182}
   m_SizeDelta: {x: 196.9945, y: 72.309}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &460768923
@@ -2517,7 +2517,7 @@ MonoBehaviour:
   m_fontSizeMin: 0
   m_fontSizeMax: 0
   m_fontStyle: 0
-  m_HorizontalAlignment: 2
+  m_HorizontalAlignment: 1
   m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
@@ -3218,7 +3218,7 @@ MonoBehaviour:
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
-  m_HorizontalAlignment: 2
+  m_HorizontalAlignment: 1
   m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
@@ -4066,7 +4066,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: 0, y: 44.15448}
+  m_AnchoredPosition: {x: -273, y: 112}
   m_SizeDelta: {x: 196.9945, y: 72.309}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &840379916
@@ -6390,6 +6390,7 @@ MonoBehaviour:
   _button1: {fileID: 460768921}
   _button2: {fileID: 840379914}
   _button3: {fileID: 1862824873}
+  _battleIndex: 0
 --- !u!4 &1371169903 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3117918663046819748, guid: 16f2a6a6321bb894c984093ed7270f45, type: 3}
@@ -6740,7 +6741,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: 297.57123, y: -100.972305}
+  m_AnchoredPosition: {x: 297.57123, y: 17}
   m_SizeDelta: {x: 421.1425, y: 78.0554}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1491749928
@@ -7524,7 +7525,7 @@ MonoBehaviour:
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
-  m_HorizontalAlignment: 2
+  m_HorizontalAlignment: 1
   m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
@@ -8660,7 +8661,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: -179.5, y: 44.15448}
+  m_AnchoredPosition: {x: -669, y: 44.15448}
   m_SizeDelta: {x: 196.9945, y: 72.309}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1862824875

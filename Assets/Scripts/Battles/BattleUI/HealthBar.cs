@@ -43,6 +43,17 @@ public class  HealthBar : MonoBehaviour
 
     public static void affectHealth(int value)
     {
-        health += value;
+        if (health + value <= 100 || health + value >= 0)
+        {
+            health += value;
+        } 
+        else if (health + value < 0)
+        {
+            health = 0;
+        }
+        else
+        {
+            health = 100;
+        }
     }
 }

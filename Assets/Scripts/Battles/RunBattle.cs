@@ -27,23 +27,18 @@ public class RunBattle : MonoBehaviour
     private TextMeshProUGUI text2;
     private TextMeshProUGUI text3;
 
-    private Boss_setup_1 bs1;
+    public int _battleIndex;
+    private Boss_script bs;
     private int health;
 
 
-
-    //public RunBattle(Joke[] jokes)
-    //{
-    //    this.jokes = jokes; 
-    //    jokeIndex = 0;
-    //}
 
     // Start is called before the first frame update
     void Start()
     {
         jokeIndex = 0;
-        bs1 = new Boss_setup_1();
-        jokes = bs1.getJokes();
+        bs = new Boss_script(_battleIndex);
+        jokes = bs.getJokes();
 
         displayJoke();
     }
@@ -53,7 +48,7 @@ public class RunBattle : MonoBehaviour
     {
         //End conditions
         health = HealthBar.getHealth();
-        if (JokeCounter > 4)
+        if (JokeCounter >= 5)
         {
             //Determine who wins
             if (health > 50)
@@ -77,16 +72,18 @@ public class RunBattle : MonoBehaviour
     }
 
 
-    public void UpdateButtons() 
-    { 
-        
+    public void endBattle()
+    {
+        // Win/Lose screen
+
+        // Switch back
     }
 
     public void endTurn(int index)
     {
         Punchline chosen = activeJoke.GetPunchlineArr()[index];
         HealthBar.affectHealth(chosen.getValue());
-        
+
         if (chosen.getGood() == true)
         {
             // Play happy sounds
@@ -94,7 +91,18 @@ public class RunBattle : MonoBehaviour
         else
         {
             // play sad sounds
-        }    
+        }
+
+        jokeIndex++;
+
+        if (jokeIndex < 5)
+        {
+            displayJoke();
+        }
+        else
+        {
+            endBattle();
+        }
     }
 
     public void displayJoke()
