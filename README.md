@@ -4,9 +4,10 @@ Welcome to Clown College, You have worked tirelessly to get here and are ready t
 
 Game developed for GameJam 2024 at Dalhousie University using the Unity engine. 
 
-Development Team:
-Lead Developers : Gaberial Savard and Anthony Safatli
-Graphics and Shaders: Will Watson
-Backend Development: Nir Kazatsker and Mack
-GUI: Lucy Woods
+# Development Team:
+
+Lead Developers : Gaberial Savard and Anthony Safatli <br />
+Graphics and Shaders: Will Watson <br />
+Backend Development: Nir Kazatsker and Mack <br />
+GUI: Lucy Woods <br />
 Story and Writing: Charlie Baker
