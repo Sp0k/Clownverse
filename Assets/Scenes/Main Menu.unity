@@ -4230,8 +4230,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 208.50932, y: -87.22}
-  m_SizeDelta: {x: 373.0187, y: 93.010315}
+  m_AnchoredPosition: {x: 338.90933, y: -87.22}
+  m_SizeDelta: {x: 633.8187, y: 93.0103}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1036514225
 MonoBehaviour:
@@ -4253,7 +4253,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Game Name
+  m_text: Traverse the clownverse
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: c98a5ae6741fb4d81a58e9d1d03720eb, type: 2}
   m_sharedMaterial: {fileID: 2523113389568682337, guid: c98a5ae6741fb4d81a58e9d1d03720eb, type: 2}
