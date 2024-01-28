@@ -13,10 +13,12 @@ public class RunBattle : MonoBehaviour
     private int JokeCounter = 0; 
 
     private Joke[] jokes;
-    private Joke ActiveJoke;
+    private Joke activeJoke;
     private int jokeIndex;
 
     //Attack Options. 
+    public GameObject _setupScript;
+    public GameObject _joke;
     public GameObject _button1; 
     public GameObject _button2;
     public GameObject _button3;
@@ -25,22 +27,24 @@ public class RunBattle : MonoBehaviour
     private TextMeshProUGUI text2;
     private TextMeshProUGUI text3;
 
+    private Boss_setup_1 bs1;
 
 
-    public RunBattle(Joke[] jokes)
-    {
-        this.jokes = jokes; 
-        jokeIndex = 0;
-    }
+
+    //public RunBattle(Joke[] jokes)
+    //{
+    //    this.jokes = jokes; 
+    //    jokeIndex = 0;
+    //}
 
     // Start is called before the first frame update
     void Start()
     {
-        this.ActiveJoke = jokes[0];
-        _button1 = GameObject.Find("Joke1");
-        _button2 = GameObject.Find("Joke2");
-        _button3 = GameObject.Find("Joke 3");
-        
+        jokeIndex = 0;
+        bs1 = new Boss_setup_1();
+        jokes = bs1.getJokes();
+
+        displayJoke();
     }
 
     // Update is called once per frame
@@ -76,21 +80,22 @@ public class RunBattle : MonoBehaviour
     { 
         
     }
-    public void _JokeOnClick()
+
+    public void endTurn(int index)
     {
-        if (EventSystem.current.currentSelectedGameObject == _button1)
-        {
-            HealthBar.affectHealth(this.ActiveJoke.GetPunchlineArr()[0].getValue());
-        }
-        else if (EventSystem.current.currentSelectedGameObject == _button2) 
-        {
-            HealthBar.affectHealth(this.ActiveJoke.GetPunchlineArr()[1].getValue()); 
-        }
-        else
-        {
-            HealthBar.affectHealth(this.ActiveJoke.GetPunchlineArr()[2].getValue());
-        }
-        
+
+    }
+
+    public void displayJoke()
+    {
+        // Setup
+        activeJoke = jokes[jokeIndex];
+        _joke.GetComponent<TextMeshProUGUI>().text = activeJoke.GetSetup();
+
+        // Punclines
+        _button1.GetComponentInChildren<TextMeshProUGUI>().text = "1. " + activeJoke.GetPunchlineArr()[0].getText();
+        _button2.GetComponentInChildren<TextMeshProUGUI>().text = "2. " + activeJoke.GetPunchlineArr()[1].getText();
+        _button3.GetComponentInChildren<TextMeshProUGUI>().text = "3. " + activeJoke.GetPunchlineArr()[2].getText();
     }
 
     //public static Joke GetActiveJoke() { return ActiveJoke;  }

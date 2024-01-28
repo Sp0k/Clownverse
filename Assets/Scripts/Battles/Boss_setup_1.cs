@@ -2,17 +2,17 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Boss_setup_1 : MonoBehaviour
+public class Boss_setup_1
 {
     // Class attributes
-    private int good = -20;
-    private int bad = 20;
-    private int mediocre = 50;
+    private int good = -10;
+    private int bad = 10;
+    private int mediocre = 15;
 
     private Joke[] jokes = new Joke[5];
 
     // Start is called before the first frame update
-    void Start()
+    public Boss_setup_1()
     {
         Punchline[] punchlines;
 

@@ -421,9 +421,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 88f10c40890ecb54cbed8856fdec9978, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  expectedTime: 0
-  randomTime: 0
-  _animation: {fileID: 0}
 --- !u!4 &119622800 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 647510253368560022, guid: a9ca23b685b62e94e84d2035d0cf417d, type: 3}
@@ -1100,9 +1097,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 88f10c40890ecb54cbed8856fdec9978, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  expectedTime: 0
-  randomTime: 0
-  _animation: {fileID: 0}
 --- !u!4 &329991888 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 177407082141715887, guid: 51e437be22296b340954bf6591a60065, type: 3}
@@ -1575,7 +1569,7 @@ GameObject:
   - component: {fileID: 460768924}
   - component: {fileID: 460768923}
   m_Layer: 5
-  m_Name: Joke1
+  m_Name: Option1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2505,8 +2499,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 24
-  m_fontSizeBase: 24
+  m_fontSize: 16
+  m_fontSizeBase: 16
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 0
@@ -3206,8 +3200,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 24
-  m_fontSizeBase: 24
+  m_fontSize: 16
+  m_fontSizeBase: 16
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -4020,9 +4014,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 88f10c40890ecb54cbed8856fdec9978, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  expectedTime: 0
-  randomTime: 0
-  _animation: {fileID: 0}
 --- !u!4 &802099894 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5107485099718359295, guid: b5a85490c717c88408f046479f4e1b8a, type: 3}
@@ -4041,7 +4032,7 @@ GameObject:
   - component: {fileID: 840379917}
   - component: {fileID: 840379916}
   m_Layer: 5
-  m_Name: Joke2
+  m_Name: Option2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5224,9 +5215,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 88f10c40890ecb54cbed8856fdec9978, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  expectedTime: 0
-  randomTime: 0
-  _animation: {fileID: 0}
 --- !u!4 &982309929 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2750536015425250604, guid: d2a6cffd27c3e44449a585a61fc0359d, type: 3}
@@ -6358,6 +6346,7 @@ GameObject:
   - component: {fileID: 1346044319}
   - component: {fileID: 1346044318}
   - component: {fileID: 1346044317}
+  - component: {fileID: 1346044321}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -6453,6 +6442,23 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &1346044321
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1346044316}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f82f383063b7f4842b745e23bcd6c657, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _setupScript: {fileID: 0}
+  _joke: {fileID: 1491749926}
+  _button1: {fileID: 460768921}
+  _button2: {fileID: 840379914}
+  _button3: {fileID: 1862824873}
 --- !u!4 &1371169903 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3117918663046819748, guid: 16f2a6a6321bb894c984093ed7270f45, type: 3}
@@ -7580,8 +7586,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 24
-  m_fontSizeBase: 24
+  m_fontSize: 16
+  m_fontSizeBase: 16
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -8249,9 +8255,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 88f10c40890ecb54cbed8856fdec9978, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  expectedTime: 0
-  randomTime: 0
-  _animation: {fileID: 0}
 --- !u!4 &1745532635 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4985801550505687018, guid: e6f91243a53d8cd4fab23ed891f0cc8a, type: 3}
@@ -8703,7 +8706,7 @@ GameObject:
   - component: {fileID: 1862824876}
   - component: {fileID: 1862824875}
   m_Layer: 5
-  m_Name: Joke 3
+  m_Name: Option3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8897,9 +8900,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 88f10c40890ecb54cbed8856fdec9978, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  expectedTime: 0
-  randomTime: 0
-  _animation: {fileID: 0}
 --- !u!4 &1882603880 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7423567203501390115, guid: b79d0b13355dc8f44b7956db61a82656, type: 3}
