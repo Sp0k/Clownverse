@@ -5,6 +5,7 @@ using Unity.VisualScripting;
 using UnityEditor.Search;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI; 
 
 public class RunBattle : MonoBehaviour
@@ -32,6 +33,8 @@ public class RunBattle : MonoBehaviour
     private Boss_script bs;
     private int health;
 
+    public int worldSaveIndex = 0;
+
 
 
     // Start is called before the first frame update
@@ -54,6 +57,7 @@ public class RunBattle : MonoBehaviour
         if (health >= 50)
         {
             _winLose.text = "YOU WIN!!! :)";
+            WorldSave.bossWins[worldSaveIndex] = true;
         }
         else
         {
@@ -61,6 +65,13 @@ public class RunBattle : MonoBehaviour
         }
 
         // switch back
+        StartCoroutine("GoBack");
+    }
+
+    IEnumerator GoBack()
+    {
+        yield return new WaitForSecondsRealtime(2);
+        SceneManager.LoadScene(1);
     }
 
     public void endTurn(int index)
