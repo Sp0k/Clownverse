@@ -27,13 +27,17 @@ Shader "Custom/Void Shader"
     }
     SubShader
     {
-        Tags {  "RenderType"="Opaque"}
+        Tags {  "Queue"="Transparent" "RenderType"="Transparent"}
         LOD 200
-        
+         Blend SrcAlpha OneMinusSrcAlpha, One OneMinusSrcAlpha
+            ZWrite On
+            ZTest LEqual
+            Offset 0 , 0
+            ColorMask RGBA
         
         CGPROGRAM
         // Physically based Standard lighting model, and enable shadows on all light types
-        #pragma surface surf Standard fullforwardshadows
+        #pragma surface surf Standard fullforwardshadows keepalpha
 
         // Use shader model 3.0 target, to get nicer looking lighting
         #pragma target 3.0
@@ -91,7 +95,6 @@ Shader "Custom/Void Shader"
         void surf (Input IN, inout SurfaceOutputStandard o)
         {
             float gamma = 2.2;
-            clip(_Color.a -1);
             float3 objectPos = mul(unity_WorldToObject,float4(IN.worldPos,1)).rgb;
             float noise = 0.5*perlinNoise3DOctaves(objectPos,_CellSize,_Seed,_Octaves)+0.5;
             bool corrupted = noise*0.99 < _Level;
