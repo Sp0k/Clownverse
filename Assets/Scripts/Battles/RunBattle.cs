@@ -28,6 +28,7 @@ public class RunBattle : MonoBehaviour
     private TextMeshProUGUI text3;
 
     private Boss_setup_1 bs1;
+    private int health;
 
 
 
@@ -51,7 +52,7 @@ public class RunBattle : MonoBehaviour
     void Update()
     {
         //End conditions
-        int health = HealthBar.getHealth();
+        health = HealthBar.getHealth();
         if (JokeCounter > 4)
         {
             //Determine who wins
@@ -83,7 +84,17 @@ public class RunBattle : MonoBehaviour
 
     public void endTurn(int index)
     {
-
+        Punchline chosen = activeJoke.GetPunchlineArr()[index];
+        HealthBar.affectHealth(chosen.getValue());
+        
+        if (chosen.getGood() == true)
+        {
+            // Play happy sounds
+        }
+        else
+        {
+            // play sad sounds
+        }    
     }
 
     public void displayJoke()

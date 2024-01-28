@@ -11,31 +11,32 @@ using Unity.VisualScripting;
 public class Button : MonoBehaviour
 {
 
-    public TextMeshProUGUI Text;
+    //public TextMeshProUGUI Text;
 
-    private Punchline punchline;
+    //private Punchline punchline;
 
-    public Button(Punchline punchline)
-    {
-        int jokeIndex = 0;
-        this.punchline = punchline;
-    }
+    //public Button(Punchline punchline)
+    //{
+    //    int jokeIndex = 0;
+    //    this.punchline = punchline;
+    //}
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        Text = FindObjectOfType<TextMeshProUGUI>();
-    }
+    //// Start is called before the first frame update
+    //void Start()
+    //{
+    //    Text = FindObjectOfType<TextMeshProUGUI>();
+    //}
 
-    // Update is called once per frame
-    void Update()
-    {
-        Text.text = punchline.getText(); 
-    }
+    //// Update is called once per frame
+    //void Update()
+    //{
+    //    Text.text = punchline.getText(); 
+    //}
 
-    public void jokeClicked() {
-        //affectHealth(get)
-    }
+    //public void jokeClicked() {
+    //    //affectHealth(get)
+    //}
 
+    // 
 
 }
