@@ -13,14 +13,12 @@ public class Button : MonoBehaviour
 
     public TextMeshProUGUI Text;
 
-    private Joke joke;
+    private Punchline punchline;
 
-    public Button(List<Joke> jokeList)
+    public Button(Punchline punchline)
     {
-        int jokeIndex = Random.Range(0, jokeList.Count);
-        this.joke = jokeList.ElementAt(jokeIndex);
-        jokeList.RemoveAt(jokeIndex);
-     
+        int jokeIndex = 0;
+        this.punchline = punchline;
     }
 
     // Start is called before the first frame update
@@ -32,7 +30,7 @@ public class Button : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Text.text = joke.getJokeString();
+        Text.text = punchline.getText(); 
     }
 
     public void jokeClicked() {
