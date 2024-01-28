@@ -5604,6 +5604,8 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 136
   maxJumpSpeed: 100
+  originPos: {x: -140, y: 2, z: -140}
+  tpHeight: -10
 --- !u!143 &1243153953
 CharacterController:
   m_ObjectHideFlags: 0
