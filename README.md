@@ -6,8 +6,8 @@ Game developed for and during GameJam 2024 at Dalhousie University using the Uni
 
 ## Development Team:
 
-Lead Developers : Gaberial Savard and Anthony Safatli <br />
+Lead Developers : Gabriel Savard and Anthony Safatli <br />
 Graphics and Shaders: Will Watson <br />
-Backend Development: Nir Kazatsker and Mack <br />
+Backend Development: Nir Kazatsker and Mack Tapp<br />
 GUI: Lucy Woods <br />
 Story and Writing: Charlie Baker
